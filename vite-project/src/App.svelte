@@ -1,34 +1,52 @@
-<body>
-  <h1>Generador de Gráficos</h1>
-
-  <div class="left">
-      <select name="" id="tipo">
-          <option value="circular">
-              Gráfico Circular
-          </option>
-          <option value="columna">
-              Gráfico de Columnas
-          </option>
-      </select>
-      <input type="text" placeholder="Título del Gráfico" id="titulo">
-      <div class="datos" id="datos">
-          <div class="dato">
-              <input type="text" placeholder="Leyenda 1" class="serie">
-              <input type="text" placeholder="Valor 1" class="valor">
-          </div>
-          <div class="dato">
-              <input type="text" placeholder="Leyenda 2" class="serie">
-              <input type="text" placeholder="Valor 2" class="valor">
-          </div>
-      </div>
-      <button onclick="agregarDato()" class="agregar"> + </button>
-      <button onclick="cargarGrafico()" class="crear-grafico">Crear Gráfico</button>
-  </div>
-  <div class="right">
-      <div id="piechart"></div>
-  </div>
-
-
-  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
-  <script src="script.js"></script>
-</body>
+<script>
+    import { onMount } from 'svelte';
+    import Chart from 'chart.js/auto';
+  
+    let chart;
+  
+    onMount(() => {
+      const ctx = document.getElementById('myChart').getContext('2d');
+  
+      chart = new Chart(ctx, {
+        type: 'doughnut',
+        data: {
+          labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+          datasets: [{
+            label: '# of Votes',
+            data: [12, 19, 3, 5, 2, 3],
+            backgroundColor: [
+              'rgba(255, 99, 132, 0.2)',
+              'rgba(54, 162, 235, 0.2)',
+              'rgba(255, 206, 86, 0.2)',
+              'rgba(75, 192, 192, 0.2)',
+              'rgba(153, 102, 255, 0.2)',
+              'rgba(255, 159, 64, 0.2)'
+            ],
+            borderColor: [
+              'rgba(255, 99, 132, 1)',
+              'rgba(54, 162, 235, 1)',
+              'rgba(255, 206, 86, 1)',
+              'rgba(75, 192, 192, 1)',
+              'rgba(153, 102, 255, 1)',
+              'rgba(255, 159, 64, 1)'
+            ],
+            borderWidth: 1
+          }]
+        },
+        options: {
+          scales: {
+            y: {
+              beginAtZero: true
+            }
+          }
+        }
+      });
+    });
+  
+    // Destroy the chart when the component is destroyed to prevent memory leaks
+    onDestroy(() => {
+      if (chart) {
+        chart.destroy();
+      }
+    });
+  </script>
