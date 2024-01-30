@@ -1,47 +1,34 @@
-<script>
-  import svelteLogo from './assets/svelte.svg'
-  import viteLogo from '/vite.svg'
-  import Counter from './lib/Counter.svelte'
-</script>
+<body>
+  <h1>Generador de Gráficos</h1>
 
-<main>
-  <div>
-    <a href="https://vitejs.dev" target="_blank" rel="noreferrer">
-      <img src={viteLogo} class="logo" alt="Vite Logo" />
-    </a>
-    <a href="https://svelte.dev" target="_blank" rel="noreferrer">
-      <img src={svelteLogo} class="logo svelte" alt="Svelte Logo" />
-    </a>
+  <div class="left">
+      <select name="" id="tipo">
+          <option value="circular">
+              Gráfico Circular
+          </option>
+          <option value="columna">
+              Gráfico de Columnas
+          </option>
+      </select>
+      <input type="text" placeholder="Título del Gráfico" id="titulo">
+      <div class="datos" id="datos">
+          <div class="dato">
+              <input type="text" placeholder="Leyenda 1" class="serie">
+              <input type="text" placeholder="Valor 1" class="valor">
+          </div>
+          <div class="dato">
+              <input type="text" placeholder="Leyenda 2" class="serie">
+              <input type="text" placeholder="Valor 2" class="valor">
+          </div>
+      </div>
+      <button onclick="agregarDato()" class="agregar"> + </button>
+      <button onclick="cargarGrafico()" class="crear-grafico">Crear Gráfico</button>
   </div>
-  <h1>Vite + Svelte</h1>
-
-  <div class="card">
-    <Counter />
+  <div class="right">
+      <div id="piechart"></div>
   </div>
 
-  <p>
-    Check out <a href="https://github.com/sveltejs/kit#readme" target="_blank" rel="noreferrer">SvelteKit</a>, the official Svelte app framework powered by Vite!
-  </p>
 
-  <p class="read-the-docs">
-    Click on the Vite and Svelte logos to learn more
-  </p>
-</main>
-
-<style>
-  .logo {
-    height: 6em;
-    padding: 1.5em;
-    will-change: filter;
-    transition: filter 300ms;
-  }
-  .logo:hover {
-    filter: drop-shadow(0 0 2em #646cffaa);
-  }
-  .logo.svelte:hover {
-    filter: drop-shadow(0 0 2em #ff3e00aa);
-  }
-  .read-the-docs {
-    color: #888;
-  }
-</style>
+  <script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+  <script src="script.js"></script>
+</body>
