@@ -2,5 +2,8 @@
   "dependencies": {
     "chart.js": "^4.4.1",
     "debug": "^4.3.4"
+  },
+  "scripts": {
+    "dev": "svelte dev"
   }
 }
