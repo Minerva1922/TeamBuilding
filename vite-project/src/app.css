@@ -1,0 +1,27 @@
+/* Estilos generales de la aplicación */
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  
+  h1 {
+    font-size: 2em;
+    margin-bottom: 20px;
+  }
+  
+  main {
+    text-align: center;
+    padding: 1em;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+  canvas {
+    max-width: 100%;
+    max-height: 100%;
+  }
+  
+  /* Otros estilos específicos de tu aplicación pueden ir aquí */
+  
