@@ -6,13 +6,7 @@
     let chart;
     let scores = []; // Aquí almacenaremos los puntajes de las respuestas
   
-    // Define las preguntas y sus puntajes
-    const questions = [
-      { text: 'Pregunta 1', scoreRange: [-5, -3, 0, 3, 5] },
-      { text: 'Pregunta 2', scoreRange: [-5, -3, 0, 3, 5] },
-      // Define las demás preguntas aquí...
-    ];
-  
+
     // Calcula el puntaje total
     function calculateTotalScore() {
       let total = 0;
