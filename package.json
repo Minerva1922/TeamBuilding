@@ -5,5 +5,8 @@
   },
   "scripts": {
     "dev": "svelte dev"
+  },
+  "devDependencies": {
+    "@sveltejs/kit": "^2.5.0"
   }
 }
