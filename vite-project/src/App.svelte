@@ -1,18 +1,29 @@
 <script>
-  import CircularChart from './lib/CircularChart.svelte';
+  // @ts-ignore
+  import QuestionnaireChart from '../src/lib/QuestionnaireChart.svelte';
 </script>
 
+<nav class="team building">
+  <ul>
+    <li class="title">TEAM<br>BUILDING</li>
+    <li class="subtitle">Diseñando equipos de trabajo de alto rendimiento creativo <br><span>POWERED BY marcsegarra.com</span></li>
+  </ul>
+</nav>
+
 <main>
-  <h1>Bienvenido a mi aplicación Svelte!</h1>
-  <!-- Aquí puedes colocar el componente del gráfico circular -->
-  <CircularChart />
+  <QuestionnaireChart />
 </main>
 
 <style>
-  main {
+  /* main {
+    height: 100%;
+    width: 100%;
     text-align: center;
-    padding: 1em;
-    max-width: 600px;
-    margin: 0 auto;
-  }
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  } */
+
 </style>
+
