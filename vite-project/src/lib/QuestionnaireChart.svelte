@@ -1,12 +1,19 @@
-<!-- QuestionnaireChart.svelte -->
 <script>
+
     import { onMount, onDestroy } from 'svelte';
     import Chart from 'chart.js/auto';
   
     let chart;
     let scores = []; // Aquí almacenaremos los puntajes de las respuestas
   
+    const questions = [
+    { text: '¿Cómo te sientes hoy?', scoreRange: [-5, -3, 0, 3, 5] },
+    { text: '¿Qué tan motivado estás para trabajar?', scoreRange: [-5, -3, 0, 3, 5] },
+    { text: '¿Estás satisfecho con tu ambiente laboral?', scoreRange: [-5, -3, 0, 3, 5] },
+    // Puedes seguir agregando más preguntas según sea necesario
+];
 
+  
     // Calcula el puntaje total
     function calculateTotalScore() {
       let total = 0;
@@ -78,11 +85,5 @@
   </script>
   
   <canvas id="myChart" width="400" height="400"></canvas>
-  
-  <!-- <style>
-    canvas {
-      max-width: 100%;
-      max-height: 100%;
-    }
-  </style> -->
+
   
