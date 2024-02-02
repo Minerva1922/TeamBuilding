@@ -1,6 +1,5 @@
 <script>
-  // @ts-ignore
-  import QuestionnaireChart from '../src/lib/QuestionnaireChart.svelte';
+  import CircularChart from './lib/CicularChart.svelte';
 </script>
 
 <nav class="team building">
@@ -11,19 +10,6 @@
 </nav>
 
 <main>
-  <QuestionnaireChart />
+  <CircularChart />
 </main>
-
-<style>
-  /* main {
-    height: 100%;
-    width: 100%;
-    text-align: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-  } */
-
-</style>
 
