@@ -1,5 +1,6 @@
 <script>
   import CircularChart from './lib/CicularChart.svelte';
+  import TestA from './lib/TestA.svelte';
 </script>
 
 <nav class="team building">
@@ -11,5 +12,6 @@
 
 <main>
   <CircularChart />
+  <TestA />
 </main>
 

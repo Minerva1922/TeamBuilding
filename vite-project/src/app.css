@@ -6,7 +6,6 @@
 
 body {
   background: linear-gradient(to bottom right, #1ACCE5, #52E8A0); height: 100vh; width: 100vh;
-
   width: 100%;
   margin: 0;
   padding: 0;
@@ -35,6 +34,13 @@ canvas {
 
   .title {
     font-family: 'sansation', sans-serif;
+  }
+
+  main {
+    background-color: #1ACCE5;
+    display: flex;
+    flex-direction: column;
+    justify-content: right;
   }
 
   
