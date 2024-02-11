@@ -79,9 +79,12 @@
 </main>
 
 <style>
+   
+
     .options-container {
         display: flex;
         flex-wrap: wrap;
+        font-family: 'sansation', sans-serif;
     }
 
     .option-button {

@@ -1,3 +1,4 @@
+<!-- CircularChart.svelte -->
 <script>
   import { onMount } from 'svelte';
   import Chart from 'chart.js/auto';
@@ -35,12 +36,12 @@
 
 <canvas id="myChart"></canvas>
 
-
 <style>
   canvas {
-    max-width: 400px; /* ajusta el tamaño según tu preferencia */
-    max-height: 600px;
+    aspect-ratio: auto 2560 / 598;
     position: absolute;
     left: 100px;
+    height: 299px;
+    width: 1280px;
   }
 </style>
