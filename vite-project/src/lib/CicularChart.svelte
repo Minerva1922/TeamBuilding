@@ -1,4 +1,4 @@
-<!-- CircularChart.svelte -->
+<!-- CircularChart.svelte 
 <script>
   import { onMount } from 'svelte';
   import Chart from 'chart.js/auto';
@@ -44,4 +44,4 @@
     height: 299px;
     width: 1280px;
   }
-</style>
+</style>-->
