@@ -73,6 +73,10 @@
 
 <style>
 
+    main{
+        padding: 20px;
+    }
+
     h1 {
         font-family: 'sansation', sans-serif;
         font-size: 60px;
