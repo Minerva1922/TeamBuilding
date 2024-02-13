@@ -3,20 +3,52 @@
   import DescripcionPerfiles from './lib/DescripcionPerfiles.svelte';
   import PorqueLosTest from './lib/PorqueLosTest.svelte';
   import TestA from './lib/TestA.svelte';
+
+let showTest = false;
+
+function startTest() {
+    showTest = true;
+}
+
+  document.addEventListener("DOMContentLoaded", function() {
+        // Encontrar el botón
+        const startTestButton = document.getElementById('start-test-btn');
+
+        // Agregar un evento de clic al botón
+        startTestButton.addEventListener('click', function() {
+            // Encontrar el inicio del test (puede ser el ID de la sección donde comienza el test)
+            const testStart = document.getElementById('testA');
+
+            // Desplazarse suavemente hacia el inicio del test
+            testStart.scrollIntoView({ behavior: 'smooth' });
+        });
+    });
 </script>
 
-<nav class="team building">
+<!-- <nav class="team building"> 
   <ul>
     <li class="title">TEAM<br>BUILDING</li>
     <li class="subtitle">Diseñando equipos de trabajo de alto rendimiento creativo <br><span>POWERED BY marcsegarra.com</span></li>
   </ul>
-</nav>
+</nav>-->
 
 <main>
+  <nav class="team building">
+      <ul>
+          <li class="title">TEAM<br>BUILDING</li>
+          <li class="subtitle">Diseñando equipos de trabajo de alto rendimiento creativo <br><span>POWERED BY marcsegarra.com</span></li>
+      </ul>
+  </nav>
+
   <CircularChart />
   <DescripcionPerfiles />
   <PorqueLosTest />
-  <TestA />
+
+  <button on:click={startTest}>Empezar Test</button>
+
+  {#if showTest}
+      <TestA />
+  {/if}
 </main>
 
 <style>
