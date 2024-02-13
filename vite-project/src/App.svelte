@@ -1,4 +1,7 @@
 <script>
+// @ts-nocheck
+
+  import {Router,Link, Route} from 'svelte-routing';
   import CircularChart from './lib/CicularChart.svelte';
   import DescripcionPerfiles from './lib/DescripcionPerfiles.svelte';
   import PorqueLosTest from './lib/PorqueLosTest.svelte';
@@ -25,30 +28,33 @@ function startTest() {
     });
 </script>
 
-<!-- <nav class="team building"> 
-  <ul>
-    <li class="title">TEAM<br>BUILDING</li>
-    <li class="subtitle">Diseñando equipos de trabajo de alto rendimiento creativo <br><span>POWERED BY marcsegarra.com</span></li>
-  </ul>
-</nav>-->
-
 <main>
-  <nav class="team building">
+  <Router>
+   <nav class="team building">
       <ul>
           <li class="title">TEAM<br>BUILDING</li>
           <li class="subtitle">Diseñando equipos de trabajo de alto rendimiento creativo <br><span>POWERED BY marcsegarra.com</span></li>
       </ul>
-  </nav>
+   </nav>
+   <!-- <Link to="haz el test">HAZ EL TEST</Link> -->
+    <CircularChart />
+    <DescripcionPerfiles />
+    <PorqueLosTest />
 
-  <CircularChart />
-  <DescripcionPerfiles />
-  <PorqueLosTest />
+    <!-- svelte-ignore missing-declaration -->
+    <button on:click={startTest}>Haz el Test</button>
 
-  <button on:click={startTest}>Empezar Test</button>
-
-  {#if showTest}
+    {#if showTest}
       <TestA />
-  {/if}
+    {/if}
+
+    <Route path= "/testA">
+      <TestA />
+    </Route>
+
+  </Router>
+
+  
 </main>
 
 <style>
