@@ -33,6 +33,14 @@
         padding: 20px
     }
 
+    .pregunta{
+        padding: 80px;
+    }
+
+    .respuestas{
+        padding: 40px;
+    }
+
     img{
         width: 50px;
     }

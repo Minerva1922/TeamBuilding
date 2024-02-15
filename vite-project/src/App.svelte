@@ -1,11 +1,12 @@
 <script>
 // @ts-nocheck
 
-  import {Router,Link, Route} from 'svelte-routing';
+  import {Router, Route} from 'svelte-routing';
   import CircularChart from './lib/CicularChart.svelte';
   import DescripcionPerfiles from './lib/DescripcionPerfiles.svelte';
   import PorqueLosTest from './lib/PorqueLosTest.svelte';
   import TestA from './lib/TestA.svelte';
+  import Comencemos from './lib/Comencemos.svelte';
 
 let showTest = false;
 
@@ -40,6 +41,7 @@ function startTest() {
     <CircularChart />
     <DescripcionPerfiles />
     <PorqueLosTest />
+    <Comencemos />
 
     <!-- svelte-ignore missing-declaration -->
     <button on:click={startTest}>Haz el Test</button>
