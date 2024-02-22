@@ -13,7 +13,19 @@
                 "Funciono especialmente bien cuando tengo tiempo para mí mismo y reflexionar.",
                 "Funciono especialmente bien cuando puedo compartir ideas con otras personas.",
                 "Tengo un círculo reducido de amistades de mucho tiempo, y soy cauto cuando conozco a alguien por primera vez.",
-                "Tengo un círculo amplio de amistades, mucha facilidad para hacer."
+                "Tengo un círculo amplio de amistades, mucha facilidad para hacer.",
+                "Utilizo la intuición como principal manera de tomar decisiones.",
+                "Utilizo la lógica y el análisi racional como principal manera de tomar decisiones.",
+                "Me gusta ser cortés con los demás, y tener en cuenta sus sentimientos al comunicarme con ellos.",
+                "Me gustan decir las cosas como son, tanto si gustan como si no.",
+                "Empleo argumentos emocionales y personales para convencer a los demás.",
+                "Empleo los argumentos lógicos y objetivos para convencer a los demás.",
+                "Prefiero la comunicación con el contexto de las situaciones, y las implicaciones personales de las mismas.",
+                "Prefiero la comunicación concisa, concreta y orientada a las tareas o cuestiones objetivas.",
+                "Tengo facilidad para expresar emociones.",
+                "No suelo expresar emociones.",
+                "Lo más importante es que la gente comprenda el por qué de las decisiones, los motivos y valores que la han inspirado.",
+                "Lo más importante es que la gente entienda lo que hay que hacer, y el para qué, es decir el objetivo que se persigue.",
             ],
             options: [-5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5]
         }
